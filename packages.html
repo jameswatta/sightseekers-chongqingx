@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="肯尼亚游猎套餐,马赛马拉,安博塞利,桑布鲁,价格" />
+  <meta name="description" content="浏览所有肯尼亚游猎套餐。支持微信支付，中文服务，乌贾马认证。" />
+  <title>游猎套餐 | 寻迹游猎</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/china.css" />
+</head>
+<body class="font-chinese bg-neutral-light text-neutral-dark">
+
+  <!-- Reuse header from index.html (simplified for brevity) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-text">Sight Seekers<span class="logo-cn">寻迹</span></span></a>
+      <nav class="main-nav">
+        <a href="/">首页</a>
+        <a href="/packages.html" class="active">游猎套餐</a>
+        <a href="/about.html">关于我们</a>
+        <a href="/contact.html">联系我们</a>
+      </nav>
+      <button class="wechat-cta" id="wechatBtn">📱 扫码咨询</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title">所有游猎套餐</h1>
+    
+    <!-- Filter Tabs -->
+    <div class="filters" style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem;">
+      <button class="btn btn-sm btn-outline active" data-filter="all">全部</button>
+      <button class="btn btn-sm btn-outline" data-filter="wildlife">🦁 野生动物</button>
+      <button class="btn btn-sm btn-outline" data-filter="photography">📸 摄影之旅</button>
+      <button class="btn btn-sm btn-outline" data-filter="cultural">🎭 文化体验</button>
+    </div>
+    
+    <!-- Packages Grid (same cards as index.html) -->
+    <div class="packages-grid" id="packagesGrid">
+      <!-- Package cards would be duplicated here or loaded via JS -->
+      <!-- For static site, duplicate the card HTML from index.html -->
+    </div>
+  </main>
+
+  <!-- Reuse footer from index.html -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Sight Seekers Safaris. 乌贾马认证运营商</p>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/currency.js"></script>
+  <script src="/js/wechat.js"></script>
+  <script src="/js/app.js"></script>
+  
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filters button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        // In production, filter the grid items
+        console.log('Filter:', filter);
+      });
+    });
+  </script>
+</body>
+</html>

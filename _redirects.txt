@@ -1,0 +1,11 @@
+# Redirect old package URLs to new structure
+/packages/masai-mara-migration    /package-detail.html?pkg=masai-mara    301
+/packages/amboseli-elephant       /package-detail.html?pkg=amboseli      301
+/packages/samburu-cultural        /package-detail.html?pkg=samburu       301
+
+# Language redirects (optional)
+/zh    /?lang=zh    301
+/sw    /?lang=sw    301
+
+# Favicon fallback
+/favicon.ico    /images/favicon.ico    200

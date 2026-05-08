@@ -1,0 +1,76 @@
+/* China-specific font loading fallbacks */
+.font-chinese {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Heiti SC", sans-serif;
+}
+
+/* Increased line height for CJK readability */
+.font-chinese p,
+.font-chinese li,
+.font-chinese .hero-subtitle,
+.font-chinese .feature-card p {
+  line-height: 1.8;
+}
+
+/* Red/Gold accents for Chinese promotions */
+.china-promo {
+  background: linear-gradient(135deg, #C9A227 0%, #D4622A 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* WeChat green accent */
+.wechat-accent {
+  color: #07C160;
+  font-weight: 600;
+}
+
+/* Baidu-friendly meta spacing */
+@media print {
+  .no-print { display: none !important; }
+}
+
+/* Mobile: sticky WeChat CTA */
+@media (max-width: 639px) {
+  .wechat-cta-mobile {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 90;
+    background: #07C160;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(7, 193, 96, 0.4);
+    font-weight: 600;
+  }
+  .wechat-cta-mobile .wechat-icon { width: 20px; height: 20px; }
+}
+
+/* Avoid unlucky number 4 in pricing displays */
+.price-cny[data-price*="4"] {
+  /* Optional: add subtle animation to draw attention away from "4" */
+  animation: none;
+}
+
+/* Lucky number 8 highlight */
+.price-cny:contains("8") {
+  /* Note: :contains() isn't valid CSS; use JS to add class if needed */
+}
+
+/* Dark mode support for OLED mobile screens */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-dark: #F5F5F5;
+    --color-neutral-light: #121212;
+  }
+  body { background: #0a0a0a; color: #f5f5f5; }
+  .site-header, .package-card, .feature-card, .modal-content { background: #1e1e1e; }
+  .main-nav a { color: #f5f5f5; }
+  .price-cny { color: #4ADE80; }
+}
