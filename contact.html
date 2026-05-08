@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="联系寻迹游猎重庆客服。支持微信咨询、行程定制、签证协助。9:00-22:00 CST 在线。" />
+  <title>联系我们 | 寻迹游猎</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/china.css" />
+</head>
+<body class="font-chinese bg-neutral-light text-neutral-dark">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-text">Sight Seekers<span class="logo-cn">寻迹</span></span></a>
+      <nav class="main-nav">
+        <a href="/">首页</a>
+        <a href="/packages.html">游猎套餐</a>
+        <a href="/about.html">关于我们</a>
+        <a href="/contact.html" class="active">联系我们</a>
+      </nav>
+      <button class="wechat-cta" id="wechatBtn">📱 扫码咨询</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="section-title" data-i18n="contact.title">联系我们</h1>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; color: #666;" data-i18n="contact.subtitle">
+      重庆专属客服在线 | 微信即时响应 | 行程定制·签证协助·摄影指导
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
+      
+      <!-- WeChat Primary -->
+      <div style="background: white; padding: 2rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow-md);">
+        <h3 style="margin: 0 0 1rem; color: var(--color-primary);">📱 微信优先咨询</h3>
+        <p style="color: #666; margin-bottom: 1.5rem;">扫码添加客服，发送“游猎”获取定制方案</p>
+        <img src="/images/wechat-qr-placeholder.png" alt="微信二维码" style="width: 200px; height: 200px; border: 3px solid var(--color-primary); border-radius: 8px; margin-bottom: 1rem;" />
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.9rem;">
+          <span>微信号:</span> <strong>SightSeekersCN</strong>
+          <button class="copy-btn" data-copy="SightSeekersCN" style="padding: 4px 8px; font-size: 0.8rem;">复制</button>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-md);">
+        <h3 style="margin: 0 0 1.5rem; color: var(--color-primary);">📝 行程咨询表</h3>
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">姓名 *</label>
+              <input type="text" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;" />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">护照姓名</label>
+              <input type="text" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;" />
+            </div>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">微信 ID</label>
+              <input type="text" placeholder="选填，方便即时沟通" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;" />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">邮箱 *</label>
+              <input type="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">预计出行日期</label>
+              <input type="date" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;" />
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">出行人数</label>
+              <select style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px;">
+                <option>1-2人</option>
+                <option>3-5人</option>
+                <option selected>6-8人 (家庭/朋友)</option>
+                <option>9-12人</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">餐饮偏好</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 中式餐饮</label>
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 素食</label>
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 清真</label>
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 无特殊要求</label>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">摄影设备</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 单反/微单</label>
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 长焦镜头</label>
+              <label style="display: flex; align-items: center; gap: 0.25rem;"><input type="checkbox" /> 手机即可</label>
+            </div>
+          </div>
+
+          <div>
+            <label style="display: block; margin-bottom: 0.25rem; font-weight: 500;">留言/特殊需求</label>
+            <textarea rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">提交咨询</button>
+        </form>
+      </div>
+
+      <!-- Trust Info -->
+      <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-md);">
+        <h3 style="margin: 0 0 1rem; color: var(--color-primary);">🔒 信任与保障</h3>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+          <li>✅ 肯尼亚本地持证运营商 (KTB 认证)</li>
+          <li>✅ 支持微信支付 / 支付宝 / 银联</li>
+          <li>✅ 行程前7天免费取消</li>
+          <li>✅ 中文客服 9:00-22:00 CST</li>
+          <li>✅ 乌贾马社区共建认证</li>
+        </ul>
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee;">
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">📧 chongqing@sightseekerssafaris.com</p>
+          <p style="margin: 0.25rem 0 0; font-size: 0.9rem; color: #666;">📍 肯尼亚总部: Nairobi, Kenya</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sight Seekers Safaris. 乌贾马认证运营商</p>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/wechat.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    // Simple form handler (static fallback)
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('✅ 咨询已提交！\n\n我们将通过微信/邮件在2小时内回复您。\n\n如需紧急联系，请扫码添加客服。');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

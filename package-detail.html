@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="肯尼亚游猎套餐详情。含每日行程、摄影指南、餐饮安排、乌贾马社区基金明细。" />
+  <title>套餐详情 | 寻迹游猎</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/china.css" />
+</head>
+<body class="font-chinese bg-neutral-light text-neutral-dark">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-text">Sight Seekers<span class="logo-cn">寻迹</span></span></a>
+      <nav class="main-nav">
+        <a href="/">首页</a>
+        <a href="/packages.html">游猎套餐</a>
+        <a href="/about.html">关于我们</a>
+        <a href="/contact.html">联系我们</a>
+      </nav>
+      <button class="wechat-cta" id="wechatBtn">📱 扫码咨询</button>
+    </div>
+  </header>
+
+  <main id="packageContent">
+    <!-- Content injected via JS based on ?pkg= parameter -->
+    <div class="container section" style="text-align: center; padding: 4rem 1rem;">
+      <h2>加载中...</h2>
+      <p>正在为您调取套餐详情</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sight Seekers Safaris. 乌贾马认证运营商</p>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+  <script src="/js/currency.js"></script>
+  <script src="/js/wechat.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    // Static package data loader (no backend required)
+    const packages = {
+      "masai-mara": {
+        title: "马赛马拉动物大迁徙",
+        subtitle: "Safari ya Wanyama wa Masai Mara",
+        days: 7,
+        guests: 8,
+        rating: 4.9,
+        priceUSD: 1870,
+        image: "/images/placeholder-package.webp",
+        overview: "见证地球上最壮观的野生动物迁徙。7天深度游猎，涵盖Big Five追踪、马拉河 crossing 观测、马赛村落文化体验。",
+        itinerary: [
+          { day: 1, title: "抵达内罗毕", desc: "接机，入住城市酒店，行前 briefing，乌贾马理念介绍" },
+          { day: 2, title: "前往马赛马拉", desc: "景观车穿越东非大裂谷，抵达保护区，傍晚游猎" },
+          { day: 3, title: "Big Five 追踪", desc: "全天游猎，向导摄影位指导，车内充电设备可用" },
+          { day: 4, title: "马拉河观测", desc: "等待角马/斑马渡河，草原野餐，日落摄影" },
+          { day: 5, title: "马赛文化体验", desc: "拜访乌贾马合作村落，珠饰工坊，传统舞蹈，社区午餐" },
+          { day: 6, title: "自由游猎/热气球", desc: "可选热气球俯瞰草原，最后一次日出游猎" },
+          { day: 7, title: "返回内罗毕", desc: "告别草原，送往机场，行程结束" }
+        ],
+        included: ["全中文/英文双语向导", "保护区门票 & 保护费", "6晚住宿 (帐篷营地+城市酒店)", "全程餐饮 (含中式选项)", "4x4 敞篷游猎车", "车内逆变器/充电口", "乌贾马社区基金 (5%)"],
+        excluded: ["国际机票", "肯尼亚电子签证费 ($50)", "小费 (建议 $10-15/天)", "个人保险", "热气球自费项目 ($450)"],
+        photography: { times: "清晨 6:00-8:00 | 傍晚 16:00-18:00", lenses: "推荐 70-200mm, 100-400mm", vehicle: "开放式车顶，360°旋转座椅，豆袋支撑", power: "车内配备 300W 逆变器，支持相机/无人机充电" },
+        dietary: "可选中式早餐(粥/面/豆浆) | 素食/清真提前告知 | 晚餐西式三道菜+当地烤肉 | 过敏源特殊处理",
+        visa: "肯尼亚 eVisa 在线申请 | 3-5工作日 | 需护照扫描件+照片+行程单 | 我们提供全程协助",
+        guide: { name: "Juma Omondi", years: 12, community: "马赛马拉", specialty: "Big Five 追踪, 摄影位指导", quote: "“每一次我带领的客人，都在为我孩子的学费和村里的水源保护项目提供支持。”" }
+      },
+      "amboseli": {
+        title: "安博塞利大象之旅",
+        subtitle: "Safari ya Tembo wa Amboseli",
+        days: 5,
+        guests: 6,
+        rating: 4.8,
+        priceUSD: 1375,
+        image: "/images/placeholder-package.webp",
+        overview: "乞力马扎罗山下的象群天堂。5天轻奢游猎，专注大象家族追踪、湿地鸟类摄影、斯瓦希里文化体验。",
+        itinerary: [
+          { day: 1, title: "内罗毕出发", desc: "清晨出发，穿越草原，抵达安博塞利，午后游猎" },
+          { day: 2, title: "象群追踪", desc: "湿地观测点，长焦摄影指导，象群行为讲解" },
+          { day: 3, title: "乞力马扎罗日照金山", desc: "清晨观景台摄影，全天游猎，社区访问" },
+          { day: 4, title: "鸟类与羚羊", desc: "Observation Hill 徒步，湿地生态讲解，日落游猎" },
+          { day: 5, title: "返回内罗毕", desc: "告别安博塞利，送往机场或城市酒店" }
+        ],
+        included: ["双语向导", "保护区门票", "4晚住宿", "全程餐饮", "4x4 游猎车", "充电设备", "社区基金 (5%)"],
+        excluded: ["机票", "签证费", "小费", "保险", "个人消费"],
+        photography: { times: "清晨 5:30-7:30 (乞力马扎罗晨雾)", lenses: "推荐 200-600mm 拍鸟, 70-200mm 拍象", vehicle: "低底盘车辆，湿地通行优化", power: "营地 220V 插座 + 车内逆变器" },
+        dietary: "营地提供简餐+热饮 | 可定制中式汤面 | 清真/素食需提前48小时通知",
+        visa: "同马赛马拉套餐，eVisa 全程协助",
+        guide: { name: "Amina Wanjiru", years: 9, community: "安博塞利", specialty: "大象行为学, 鸟类摄影", quote: "“安博塞利的大象家族有名字、有故事。我带客人认识它们，就像介绍老朋友。”" }
+      },
+      "samburu": {
+        title: "桑布鲁文化体验",
+        subtitle: "Uzoefu wa Utamaduni wa Samburu",
+        days: 6,
+        guests: 10,
+        rating: 4.7,
+        priceUSD: 1560,
+        image: "/images/placeholder-package.webp",
+        overview: "肯尼亚北部秘境，桑布鲁五特有种追踪。6天文化+游猎深度结合，探访传统村落，支持女性珠饰合作社。",
+        itinerary: [
+          { day: 1, title: "飞往桑布鲁", desc: "小型飞机景观飞行，抵达营地，欢迎仪式" },
+          { day: 2, title: "五特有种追踪", desc: "细纹斑马、长颈羚、索马里鸵鸟、剑羚、非洲野狗" },
+          { day: 3, title: "桑布鲁村落访问", desc: "传统茅屋参观，珠饰制作体验，乌贾马合作社交流" },
+          { day: 4, title: "Ewaso Nyiro 河游猎", desc: "河马/鳄鱼观测，河畔野餐，文化故事分享" },
+          { day: 5, title: "自由探索/摄影", desc: "清晨摄影专场，下午自由休息或二次村落访问" },
+          { day: 6, title: "返程", desc: "景观飞行返回内罗毕，行程结束" }
+        ],
+        included: ["双语向导", "保护区/社区费", "5晚住宿 (生态营地)", "全程餐饮", "小型飞机往返", "合作社支持 (10%)", "社区基金 (5%)"],
+        excluded: ["国际机票", "签证费", "小费", "保险", "额外珠饰购买 (自愿)"],
+        photography: { times: "清晨 6:00-8:30 (特有种活跃期)", lenses: "推荐 100-400mm, 偏振镜防反光", vehicle: "定制游猎车，北部地形适应", power: "营地太阳能充电 + 车内备用电池" },
+        dietary: "营地提供本地+西式融合餐 | 可安排中式简餐 | 桑布鲁传统蜂蜜茶体验",
+        visa: "同前，eVisa 协助",
+        guide: { name: "Lekuton Leturua", years: 15, community: "桑布鲁", specialty: "北部特有种追踪, 文化翻译", quote: "“桑布鲁人不是背景板，而是这片土地的主人。我带客人平等对话，而非旁观。”" }
+      }
+    };
+
+    // Load package based on URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    const pkgId = urlParams.get('pkg') || 'masai-mara';
+    const pkg = packages[pkgId] || packages['masai-mara'];
+
+    // Inject content
+    document.getElementById('packageContent').innerHTML = `
+      <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${pkg.image}'); min-height: 60vh;">
+        <div class="container hero-content">
+          <span class="promo-badge">🏆 乌贾马认证</span>
+          <h1 class="hero-title" style="margin-top: 1rem;">${pkg.title}</h1>
+          <p class="hero-subtitle">${pkg.subtitle}</p>
+          <div class="trust-bar" style="margin-bottom: 0;">
+            <span> ${pkg.days}天</span>
+            <span>👥 最多${pkg.guests}人</span>
+            <span>⭐ ${pkg.rating}</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="container" style="display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2rem 0;">
+        
+        <!-- Main Content -->
+        <div>
+          <h2 style="margin: 0 0 1rem; color: var(--color-primary);">📖 行程概述</h2>
+          <p style="line-height: 1.8; color: #444;">${pkg.overview}</p>
+
+          <h2 style="margin: 2rem 0 1rem; color: var(--color-primary);">📅 每日行程</h2>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            ${pkg.itinerary.map(day => `
+              <details style="background: white; padding: 1rem; border-radius: 6px; box-shadow: var(--shadow-sm);">
+                <summary style="font-weight: 600; cursor: pointer;">第${day.day}天：${day.title}</summary>
+                <p style="margin-top: 0.5rem; color: #555;">${day.desc}</p>
+              </details>
+            `).join('')}
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 6px;">
+              <h3 style="margin: 0 0 0.5rem; color: var(--color-success);">✅ 包含</h3>
+              <ul style="padding-left: 1.2rem; line-height: 1.8;">${pkg.included.map(i => `<li>${i}</li>`).join('')}</ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 6px;">
+              <h3 style="margin: 0 0 0.5rem; color: var(--color-error);">❌ 不包含</h3>
+              <ul style="padding-left: 1.2rem; line-height: 1.8;">${pkg.excluded.map(i => `<li>${i}</li>`).join('')}</ul>
+            </div>
+          </div>
+
+          <!-- China-Specific Info -->
+          <div style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 6px;">
+            <h3 style="margin: 0 0 0.5rem; color: var(--color-primary);">📸 摄影指南</h3>
+            <p><strong>最佳时间：</strong>${pkg.photography.times}</p>
+            <p><strong>推荐镜头：</strong>${pkg.photography.lenses}</p>
+            <p><strong>车辆配置：</strong>${pkg.photography.vehicle}</p>
+            <p><strong>充电设施：</strong>${pkg.photography.power}</p>
+          </div>
+
+          <div style="margin-top: 1.5rem; background: white; padding: 1.5rem; border-radius: 6px;">
+            <h3 style="margin: 0 0 0.5rem; color: var(--color-primary);">🍽️ 餐饮安排</h3>
+            <p>${pkg.dietary}</p>
+          </div>
+
+          <div style="margin-top: 1.5rem; background: white; padding: 1.5rem; border-radius: 6px;">
+            <h3 style="margin: 0 0 0.5rem; color: var(--color-primary);">🛂 签证协助</h3>
+            <p>${pkg.visa}</p>
+          </div>
+
+          <!-- Guide -->
+          <div style="margin-top: 2rem; background: var(--color-neutral-light); padding: 1.5rem; border-radius: 6px; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <img src="/images/placeholder-package.webp" alt="${pkg.guide.name}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;" />
+            <div>
+              <h3 style="margin: 0;">${pkg.guide.name}</h3>
+              <p style="margin: 0.25rem 0; color: #666;">${pkg.guide.community} · ${pkg.guide.years}年经验 · ${pkg.guide.specialty}</p>
+              <p style="font-style: italic; margin: 0.5rem 0; color: #444;">“${pkg.guide.quote}”</p>
+              <span class="ujamaa-badge">🏆 乌贾马认证合伙人</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Sidebar (Desktop) / Top (Mobile) -->
+        <div style="position: sticky; top: 100px; height: fit-content;">
+          <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-lg); text-align: center;">
+            <div class="package-price" data-price-usd="${pkg.priceUSD}" style="margin: 1rem 0;">
+              <span class="price-cny">¥${(pkg.priceUSD * 7.19).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} <small>/人</small></span>
+              <span class="price-usd">$${pkg.priceUSD.toLocaleString()} <small>/person</small></span>
+              <small class="rate-note">汇率每小时更新</small>
+            </div>
+            <div class="ujamaa-badge" style="margin: 0.5rem 0; justify-content: center;">💚 5% 收益支持社区基金</div>
+            <a href="/contact.html?package=${pkgId}" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">立即预订</a>
+            <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="document.getElementById('wechatBtn').click()">微信咨询</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Re-run currency converter after DOM injection
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.currency) window.currency.updatePrices();
+    });
+  </script>
+</body>
+</html>
